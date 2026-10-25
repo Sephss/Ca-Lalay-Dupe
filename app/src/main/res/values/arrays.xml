@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vehicle_types">
+        <item>Select Type</item>
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Van</item>
+        <item>Pickup Truck</item>
+        <item>Hatchback</item>
+        <item>Motorcycle</item>
+        <item>Tricycle</item>
+    </string-array>
+
+    <string-array name="vehicle_sizes">
+        <item>Select Size</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <string-array name="wheel_counts">
+        <item>Select Wheels</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8+</item>
+    </string-array>
+</resources>

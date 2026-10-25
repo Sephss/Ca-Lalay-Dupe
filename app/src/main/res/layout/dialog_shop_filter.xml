@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter Providers"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ROLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provider Type"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/roleRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioShopOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop" />
+
+        <RadioButton
+            android:id="@+id/radioFreelancer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Freelancer" />
+
+    </RadioGroup>
+
+    <!-- RATING -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum Rating"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/ratingRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioRatingAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any rating"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioRating5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 stars only" />
+
+        <RadioButton
+            android:id="@+id/radioRating4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 stars &amp; up" />
+
+        <RadioButton
+            android:id="@+id/radioRating3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 stars &amp; up" />
+
+        <RadioButton
+            android:id="@+id/radioRating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 stars &amp; up" />
+
+        <RadioButton
+            android:id="@+id/radioRating1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 star &amp; up" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center
+">
+
+        <Button
+            android:id="@+id/btnResetFilter"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:background="@drawable/rounded_cancel"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_btn_registration"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Apply Filters" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "368445074449",
+    "firebase_url": "https://ca-lalay-default-rtdb.firebaseio.com",
+    "project_id": "ca-lalay",
+    "storage_bucket": "ca-lalay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368445074449:android:49c97ba184ba6c830395b0",
+        "android_client_info": {
+          "package_name": "com.example.ca_lalay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvjVAduVLRSUwKwlMXBmgFOko6yqFD5q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

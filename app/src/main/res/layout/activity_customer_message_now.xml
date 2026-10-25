@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.customer.CustomerMessageNow">
+
+    <LinearLayout
+        android:id="@+id/linearLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp"
+
+        android:background="@android:color/white"
+        android:elevation="6dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/back" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/messageReceiverProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            />
+
+        <TextView
+            android:id="@+id/messageReceiverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=""
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-- RecyclerView (Messages) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout19" />
+
+    <!-- Bottom Input Area -->
+    <LinearLayout
+        android:id="@+id/messageInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+      <LinearLayout
+          android:visibility="gone"
+          android:id="@+id/sendImageLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <FrameLayout
+                 android:id="@+id/imagePreviewContainer"
+                 android:layout_width="128dp"
+                 android:layout_height="110dp"
+                 android:layout_marginBottom="10dp">
+
+                 <!-- Image -->
+                 <ImageView
+                     android:id="@+id/selectImagePreview"
+                     android:layout_width="100dp"
+                     android:layout_height="100dp"
+                     android:layout_gravity="bottom|start"
+                     android:scaleType="centerCrop" />
+
+                 <!-- X outside the image -->
+                 <ImageButton
+                     android:id="@+id/removeImageButton"
+                     android:layout_width="28dp"
+                     android:layout_height="28dp"
+                     android:layout_marginEnd="15dp"
+                     android:layout_gravity="top|end"
+                     android:background="@drawable/bg_remove_image"
+                     android:contentDescription="Remove image"
+                     android:padding="6dp"
+                     android:src="@drawable/close_white" />
+
+             </FrameLayout>
+         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/reselectImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="Send"
+                android:src="@drawable/select_image"
+                android:layout_marginEnd="8dp"/>
+            <Button
+                android:id="@+id/sendImageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_registration"
+                android:text="Send"
+                android:textColor="@color/semiwhite"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendTextMessageLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:orientation="horizontal">
+
+         <ImageView
+             android:id="@+id/selectImageBtn"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:text="Send"
+             android:src="@drawable/select_image"
+             android:layout_marginEnd="8dp"/>
+         <!-- Message Input -->
+         <EditText
+             android:id="@+id/messageEditText"
+             android:layout_width="0dp"
+             android:layout_height="45dp"
+             android:layout_weight="1"
+             android:hint="Type a message..."
+             android:padding="8dp"
+             android:background="@drawable/message_input_field_bg"
+             android:inputType="textMultiLine"
+             android:maxLines="4"/>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+
+             <!-- Send Button -->
+             <ImageView
+                 android:id="@+id/sendButton"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:text="Send"
+                 android:visibility="gone"
+                 android:src="@drawable/message_red"
+                 android:layout_marginStart="8dp"/>
+
+             <ImageView
+                 android:id="@+id/likeBtn"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:text="Send"
+                 android:src="@drawable/like_red"
+                 android:layout_marginStart="8dp"/>
+         </LinearLayout>
+     </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

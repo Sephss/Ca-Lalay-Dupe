@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.CaLalay" parent="Theme.AppCompat.Light.NoActionBar">
+
+
+        <item name="android:fontFamily">@font/inter_family</item>
+        <item name="fontFamily">@font/inter_family</item>
+
+    </style>
+
+    <style name="Theme.CaLalay" parent="Base.Theme.CaLalay" />
+</resources>

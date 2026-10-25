@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="24dp"
+        android:background="@drawable/rounded_modal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Added Services"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional services added to this booking."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Service"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/serviceAddedDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Window Clean, Tire Wind, Mat Change"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3dp"
+            android:padding="14dp"
+            android:background="@drawable/edittext_rounded" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Price"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/serviceAddedPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₱600"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="14dp"
+            android:background="@drawable/edittext_rounded" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remarks"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/serviceAddedRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Window Clean, Tire Wind, Mat Change is ₱200 each"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3dp"
+            android:padding="14dp"
+            android:background="@drawable/edittext_rounded" />
+
+        <Button
+            android:id="@+id/closeAdditionalServicesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:text="Close"
+            android:textColor="@color/semiwhite"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_btn_registration" />
+
+    </LinearLayout>
+
+</ScrollView>

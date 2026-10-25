@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_margin="10dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_modal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modify Booking"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add additional service details to this booking."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Additional Service -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Service"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/serviceAddedInput"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/edittext_rounded"
+            android:hint="e.g. Window Clean, Tire Wind, Mat Change"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkergrey"
+            android:textSize="14sp"
+            android:gravity="top|start"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="14dp" />
+
+        <!-- Additional Total Price -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Total Price"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/serviceAddedTotalPriceInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edittext_rounded"
+            android:hint="e.g. 600"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkergrey"
+            android:textSize="14sp"
+            android:inputType="numberDecimal"
+            android:padding="14dp" />
+
+        <!-- Remarks -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remarks"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/serviceAddedRemarksInput"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Explain the additional service, pricing, or other important details..."
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkergrey"
+            android:textSize="14sp"
+            android:gravity="top|start"
+            android:lineSpacingExtra="3dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="14dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/cancelModifyBookingBtn"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_cancel" />
+
+            <Button
+                android:id="@+id/saveModifyBookingBtn"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Save Changes"
+                android:textColor="@color/semiwhite"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_btn_registration" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

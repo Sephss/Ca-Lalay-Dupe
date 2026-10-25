@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/offwhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.shopowner.ShopOwnerDashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- SHOP COVER IMAGE -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shopImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sent_image_placeholder" />
+
+                <!-- DARK OVERLAY -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <!-- SHOP INFORMATION -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- SHOP NAME -->
+                    <TextView
+                        android:id="@+id/shopName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Loading..."
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <!-- RATING + STATUS -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- RATING -->
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/star" />
+
+                        <TextView
+                            android:id="@+id/shopRatings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="0.0"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- SEPARATOR -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="•"
+                            android:textColor="#DDFFFFFF"
+                            android:textSize="14sp" />
+
+                        <!-- OPEN STATUS -->
+                        <TextView
+                            android:id="@+id/shopStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- OPENING HOURS -->
+                    <TextView
+                        android:id="@+id/shopOpeningHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textColor="#E6FFFFFF"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/actionRequiredLayout"
+                android:background="@color/warningbgcolor"
+                android:layout_width="match_parent"
+                android:layout_margin="15dp"
+                android:padding="12dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_warning_24yellow"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_required_message"
+                            android:textColor="@color/tellowtxt" />
+
+                        <Button
+                            android:id="@+id/completeNowBtn"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:background="@drawable/rounded_btn_completenow"
+                            android:text="Complete Now"
+                            android:textColor="@color/semiwhite"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                android:text="Today's overview"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="20dp"
+                android:id="@+id/linearLayout17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shop_ratings_bg"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income today"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/totalIncomeToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/noBookingsCompletedTodayNote"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:text="No completed bookings today"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:background="@drawable/todays_overview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/calendar_dashboard" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+
+                        <TextView
+                            android:id="@+id/totalBookingsToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Bookings"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/todays_overview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/baseline_cancel_24" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+
+                        <TextView
+                            android:id="@+id/totalCancelledToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Cancelled"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/todays_overview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/check_dashboard" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+
+                        <TextView
+                            android:id="@+id/totalCompletedToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Completed"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                android:text="Quick actions"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <LinearLayout
+
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:id="@+id/browseServicesLayout"
+                       android:gravity="center_vertical"
+                       android:padding="20dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/todays_overview"
+                       android:layout_width="match_parent"
+                       android:layout_marginEnd="20dp"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_marginEnd="10dp"
+                           android:src="@drawable/browse_history" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="My Services"
+                               android:textColor="@color/black"
+                               android:textSize="13sp" />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="Manage pricing and offerings"
+                               android:textSize="11sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:gravity="end"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <ImageView
+                               android:layout_width="18dp"
+                               android:layout_height="18dp"
+                               android:src="@drawable/forward_icon" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/myBookings"
+                       android:gravity="center_vertical"
+                       android:padding="20dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/todays_overview"
+                       android:layout_width="match_parent"
+                       android:layout_marginEnd="20dp"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_marginEnd="10dp"
+                           android:src="@drawable/calendar" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="My Bookings"
+                               android:textColor="@color/black"
+                               android:textSize="13sp" />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="See all appointments"
+                               android:textSize="11sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:gravity="end"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <ImageView
+                               android:layout_width="18dp"
+                               android:layout_height="18dp"
+                               android:src="@drawable/forward_icon" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/nearbyMaps"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="20dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginEnd="20dp"
+                       android:background="@drawable/todays_overview"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal"
+                       android:padding="20dp">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_marginEnd="10dp"
+                           android:src="@drawable/nearby_location" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="Nearby Location"
+                               android:textColor="@color/black"
+                               android:textSize="13sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="View other shops location"
+                               android:textSize="11sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:gravity="end"
+                           android:orientation="horizontal">
+
+                           <ImageView
+                               android:layout_width="18dp"
+                               android:layout_height="18dp"
+                               android:src="@drawable/forward_icon" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/reportsBtn"
+                       android:gravity="center_vertical"
+                       android:padding="20dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/todays_overview"
+                       android:layout_width="match_parent"
+                       android:layout_marginEnd="20dp"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_marginEnd="10dp"
+                           android:src="@drawable/generate_report_icon" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="Reports"
+                               android:textColor="@color/black"
+                               android:textSize="13sp" />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="See what you shops doing"
+                               android:textSize="11sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:gravity="end"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <ImageView
+                               android:layout_width="18dp"
+                               android:layout_height="18dp"
+                               android:src="@drawable/forward_icon" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+
+
+                   <LinearLayout
+                       android:id="@+id/myRatings"
+                       android:gravity="center_vertical"
+                       android:padding="20dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/todays_overview"
+                       android:layout_width="match_parent"
+                       android:layout_marginEnd="20dp"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_marginEnd="10dp"
+                           android:src="@drawable/rate" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="Reviews and Feedbacks"
+                               android:textColor="@color/black"
+                               android:textSize="13sp" />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:gravity="center"
+                               android:text="See what customers are saying"
+                               android:textSize="11sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:gravity="end"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <ImageView
+                               android:layout_width="18dp"
+                               android:layout_height="18dp"
+                               android:src="@drawable/forward_icon" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+               </LinearLayout>
+           </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_red" />
+
+
+        <ImageView
+            android:id="@+id/goToMessages"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/message_grey" />
+
+
+        <ImageView
+            android:id="@+id/goToProfile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/profile_grey" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

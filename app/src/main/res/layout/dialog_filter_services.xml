@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_modal"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Services"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="13sp"
+            android:textColor="#757575" />
+
+        <Spinner
+            android:background="@drawable/edittext_rounded"
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Price Range -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Range (₱)"
+            android:textSize="13sp"
+            android:textColor="#757575" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/minPriceInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded"
+                android:layout_weight="1"
+                android:hint="Min"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  -  "
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/maxPriceInput"
+                android:layout_width="0dp"
+                android:background="@drawable/edittext_rounded"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Duration Range -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration (hrs)"
+            android:textSize="13sp"
+            android:textColor="#757575" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/minDurationInput"
+                android:background="@drawable/edittext_rounded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Min"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  -  "
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/maxDurationInput"
+                android:background="@drawable/edittext_rounded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Sort By (separated from category) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By Price"
+            android:textSize="13sp"
+            android:textColor="#757575" />
+
+        <RadioGroup
+            android:id="@+id/sortRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/radioSortNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="None"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioSortLowest"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Lowest First" />
+
+            <RadioButton
+                android:id="@+id/radioSortHighest"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Highest First" />
+        </RadioGroup>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClearFilters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_cancel"
+                android:layout_marginEnd="8dp"
+                android:text="Clear All"
+                />
+
+            <Button
+                android:id="@+id/btnApplyFilters"
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_btn_registration"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apply Filters" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

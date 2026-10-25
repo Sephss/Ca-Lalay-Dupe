@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="semiblack">#484848</color>
+    <color name="ratingscolor">#D1D1D1</color>
+    <color name="semigrey">#8E8E8E</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="semiwhite">#F3F3F3</color>
+        <color name="red">#EA5050</color>
+
+    <color name="offwhite">#F5F9FC</color>
+
+    <color name="whitered">#FFEFEF</color>
+    <color name="lightred">#EB9999</color>
+    <color name="lightblue">#8F94FF</color>
+    <color name="lighterblue">#E3E4FF</color>
+    <color name="whiteblue">#D5D6FB</color>
+    <color name="darkblue">#454DF8</color>
+    <color name="lightgrey">#E4E4E4</color>
+    <color name="superlighred">#FFF1F1</color>
+    <color name="inputmessagecolor">#E6E6E6</color>
+
+    <color name="orangedark">#D36B1B</color>
+    <color name="lighterorange">#FFDFC6</color>
+
+    <!-- Frosted glass tag (Shop / Freelancer badge) -->
+    <color name="frosted_white_fill">#1FFFFFFF</color>
+    <color name="frosted_white_stroke">#40FFFFFF</color>
+
+    <color name="imagewaiting">#C8C8C8</color>
+
+    <color name="darkergrey">#1D1D1D</color>
+
+    <color name="tellowtxt">#5D4037</color>
+    <color name="warningbgcolor">#FFF8E1</color>
+
+    <color name="other_message_text">#65676B  </color>
+</resources>
+

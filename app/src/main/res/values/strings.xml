@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ca-Lalay</string>
+    <string name="what_is_shop_slot"><u>What is shop slot?</u></string>
+    <string name="billing_details"><u>Billing Details</u></string>
+    <string name="shopOnlineDetails"><u>View Shop Online Payment Details</u></string>
+    <string name="additional_details"><u>View Added Services</u></string>
+    <string name="action_required_message"><b>Action Required:</b> Complete your shop profile to start creating and listing your services.</string>
+    <string name="action_required_message_vehicle"><b>Action Required:</b> Register your vehicle to start browsing and view all available services.</string>
+</resources>
